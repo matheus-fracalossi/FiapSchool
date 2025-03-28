@@ -1,9 +1,10 @@
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
+import {SafeAreaBackground} from '../../../core/components';
 
 export const SignIn = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <SafeAreaBackground>
       <Text>Sign In</Text>
-    </View>
+    </SafeAreaBackground>
   );
 };
