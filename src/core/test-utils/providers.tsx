@@ -3,15 +3,23 @@ import {render} from '@testing-library/react-native';
 import {defaultTheme} from '../themes';
 import {JSX} from 'react';
 
-export const renderComponent = (component: JSX.Element) =>
-  render(component, {
+type ComponentTreeType = {
+  type: string;
+  props: {
+    style: {};
+  };
+  children: ComponentTreeType[];
+};
+
+export const renderComponent = (componentProp: JSX.Element) => {
+  const component = render(componentProp, {
     wrapper: ({children}) => (
       <ThemeProvider theme={defaultTheme}>{children}</ThemeProvider>
     ),
-  }).toJSON() as {
-    type: string;
-    props: {
-      style: {};
-    };
-    children: null | JSX.Element;
+  });
+
+  return {
+    component,
+    tree: component.toJSON() as ComponentTreeType,
   };
+};

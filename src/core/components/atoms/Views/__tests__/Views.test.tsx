@@ -2,11 +2,11 @@ import {renderComponent} from '../../../../test-utils';
 import {defaultTheme} from '../../../../themes';
 import {SafeAreaBackground} from '../Views';
 
-const componentTree = () => renderComponent(<SafeAreaBackground />);
+const renderedComponent = () => renderComponent(<SafeAreaBackground />);
 
 describe('<SafeAreaBackground />', () => {
   it('Should have correct style', () => {
-    const tree = componentTree();
+    const {tree} = renderedComponent();
 
     expect(tree).toHaveStyle({
       flexGrow: 1,

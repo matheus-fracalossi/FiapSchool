@@ -2,11 +2,11 @@ import {renderComponent} from '../../../../test-utils';
 import {defaultTheme} from '../../../../themes';
 import {Text} from '../Text';
 
-const componentTree = () => renderComponent(<Text />);
+const renderedComponent = () => renderComponent(<Text />);
 
 describe('<Text />', () => {
   it('Should have correct base style', () => {
-    const tree = componentTree();
+    const {tree} = renderedComponent();
 
     expect(tree).toHaveStyle({
       color: defaultTheme.colors.text.primary,
