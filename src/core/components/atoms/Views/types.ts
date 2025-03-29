@@ -3,6 +3,12 @@ import {DefaultTheme} from 'styled-components/native';
 
 type ViewColorType = keyof Omit<DefaultTheme['colors'], 'text'>;
 
+type Padding =
+  | `${number}px ${number}px ${number}px ${number}px` // Four values
+  | `${number}px ${number}px ${number}px` // Three values
+  | `${number}px ${number}px`
+  | `${number}px`;
+
 export type ViewProps = {
   align?: FlexStyle['alignItems'];
   justify?: FlexStyle['justifyContent'];
@@ -18,11 +24,13 @@ export type ViewProps = {
   blw?: FlexStyle['borderLeftWidth'];
   brw?: FlexStyle['borderRightWidth'];
 
-  p?: FlexStyle['padding'];
+  p?: Padding;
   pt?: FlexStyle['paddingTop'];
   pb?: FlexStyle['paddingBottom'];
   pl?: FlexStyle['paddingLeft'];
   pr?: FlexStyle['paddingRight'];
+  pv?: FlexStyle['paddingVertical'];
+  ph?: FlexStyle['paddingHorizontal'];
 
   m?: FlexStyle['margin'];
   mt?: FlexStyle['marginTop'];

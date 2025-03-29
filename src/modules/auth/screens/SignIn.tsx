@@ -1,5 +1,10 @@
 import {useState} from 'react';
-import {Column, Input, SafeAreaBackground} from '../../../core/components';
+import {
+  Column,
+  Image,
+  Input,
+  SafeAreaBackground,
+} from '../../../core/components';
 import {cpfMask} from '../../../core/utils';
 
 export const SignIn = () => {
@@ -15,7 +20,13 @@ export const SignIn = () => {
   };
 
   return (
-    <SafeAreaBackground>
+    <SafeAreaBackground gap={80} p="48px 48px 0px">
+      <Image
+        source={require('../../../core/assets/images/logo.png')}
+        width="100%"
+        resizeMode="contain"
+        als="center"
+      />
       <Column gap={50}>
         <Input
           title="CPF"
