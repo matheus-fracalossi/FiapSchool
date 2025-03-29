@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
-import {ImageProps} from './types';
+import {ViewProps} from '../Views/types';
 
-export const Image = styled.Image<ImageProps>`
+export const Image = styled.Image<ViewProps>`
   ${({height, width, als}) => `
     ${
       height

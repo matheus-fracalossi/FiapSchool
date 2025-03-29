@@ -37,4 +37,8 @@ export type ViewProps = {
   mb?: FlexStyle['marginBottom'];
   ml?: FlexStyle['marginLeft'];
   mr?: FlexStyle['marginRight'];
+
+  height?: FlexStyle['height'];
+  width?: FlexStyle['width'];
+  als?: FlexStyle['alignSelf'];
 };
