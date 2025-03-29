@@ -9,5 +9,18 @@ export const defaultTheme = {
       disabled: '#777777',
     },
   },
-  typography: {},
+  typography: {
+    weights: {
+      bold: 'Montserrat-Bold',
+      medium: 'Montserrat-Medium',
+      regular: 'Montserrat-Regular',
+    },
+    sizes: {
+      small: 12,
+      base: 16,
+      medium: 20,
+      large: 24,
+      xLarge: 32,
+    },
+  },
 } as const;

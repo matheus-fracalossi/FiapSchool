@@ -1,5 +1,6 @@
 import {SafeAreaBackground} from '../SafeAreaBackground';
 import {renderComponent} from '../../../../test-utils';
+import {defaultTheme} from '../../../../themes';
 
 const componentTree = () => renderComponent(<SafeAreaBackground />);
 
@@ -11,7 +12,7 @@ describe('<SafeAreaBackground />', () => {
       flexGrow: 1,
       flexShrink: 1,
       flexBasis: 0,
-      backgroundColor: '#000000',
+      backgroundColor: defaultTheme.colors.background,
     });
   });
 });
