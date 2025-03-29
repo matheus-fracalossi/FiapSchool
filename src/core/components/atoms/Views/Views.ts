@@ -1,7 +1,8 @@
-import styled from 'styled-components/native';
+import styled, {css} from 'styled-components/native';
 import {ViewProps} from './types';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
-export const Column = styled.View<ViewProps>`
+const sharedViewProps = css<ViewProps>`
   ${({theme, ...props}) => `
     ${props.bg ? `background-color: ${theme.colors[props.bg]};` : ''}
     ${props.align ? `align-items: ${props.align};` : ''}
@@ -27,4 +28,14 @@ export const Column = styled.View<ViewProps>`
   `}
 `;
 
+export const Column = styled.View<ViewProps>`
+  ${sharedViewProps}
+`;
+
 export const Row = styled(Column)``;
+
+export const SafeAreaBackground = styled(SafeAreaView)<ViewProps>`
+  flex: 1;
+  background-color: ${({theme}) => theme.colors.background};
+  ${sharedViewProps}
+`;

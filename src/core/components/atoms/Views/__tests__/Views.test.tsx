@@ -1,6 +1,6 @@
-import {SafeAreaBackground} from '../SafeAreaBackground';
 import {renderComponent} from '../../../../test-utils';
 import {defaultTheme} from '../../../../themes';
+import {SafeAreaBackground} from '../Views';
 
 const componentTree = () => renderComponent(<SafeAreaBackground />);
 
