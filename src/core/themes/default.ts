@@ -5,6 +5,7 @@ export const defaultTheme = {
     blur: '#525252',
     text: {
       primary: '#FFFFFF',
+      secondary: '#000000',
       cta: '#29F4D5',
       disabled: '#777777',
     },
