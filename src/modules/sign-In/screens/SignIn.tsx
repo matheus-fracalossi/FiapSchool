@@ -51,11 +51,9 @@ export const SignIn = () => {
             secureTextEntry
           />
           {error && (
-            <Column align="center">
-              <Text weight="medium" color="cta">
-                {error}
-              </Text>
-            </Column>
+            <Text weight="medium" color="cta" textAlign="center">
+              {error}
+            </Text>
           )}
         </Column>
       </Column>

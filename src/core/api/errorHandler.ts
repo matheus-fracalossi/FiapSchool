@@ -14,17 +14,17 @@ const errorMessages = {
 };
 
 export const handleApiError = (error: ErrorHandlerType): string => {
-  if (error.response) {
-    const {status, data} = error.response;
+  if (error && error.status && error.response) {
+    const {data} = error.response;
     if (
-      (status === HttpStatusCode.BadRequest ||
-        status === HttpStatusCode.Unauthorized) &&
+      (error.status === HttpStatusCode.BadRequest ||
+        error.status === HttpStatusCode.Unauthorized) &&
       data.message
     ) {
       return data.message;
     }
 
-    return errorMessages[status as HttpStatusCode];
+    return errorMessages[error.status as HttpStatusCode];
   }
 
   return errorMessages[HttpStatusCode.InternalServerError];

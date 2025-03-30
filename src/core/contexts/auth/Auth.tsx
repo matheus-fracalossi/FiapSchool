@@ -8,13 +8,8 @@ import React, {
 
 import {readData, removeData, storeData} from '../../local-storage';
 import {StoreKeys} from '../../local-storage/types';
-
-interface AuthContextType {
-  userToken: string | null;
-  isAuthenticated: boolean;
-  storeUserToken: (token: string) => Promise<void>;
-  clearUserToken: () => Promise<void>;
-}
+import {configResponseInterceptor, setRequestToken} from '../../api/api';
+import {AuthContextType} from './types';
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
@@ -23,9 +18,18 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
 
   const isAuthenticated = !!userToken;
 
+  const loadUser = async () => {
+    const token = await readData(StoreKeys.USER_TOKEN);
+
+    if (token) {
+      setRequestToken(token);
+      setUserToken(token);
+    }
+  };
+
   const storeUserToken = async (token: string) => {
     await storeData(token, StoreKeys.USER_TOKEN);
-    setUserToken(token);
+    await loadUser();
   };
 
   const clearUserToken = async () => {
@@ -34,14 +38,7 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
   };
 
   useEffect(() => {
-    const loadUser = async () => {
-      const token = await readData(StoreKeys.USER_TOKEN);
-
-      if (token) {
-        setUserToken(token);
-      }
-    };
-
+    configResponseInterceptor(clearUserToken);
     loadUser();
   }, []);
 

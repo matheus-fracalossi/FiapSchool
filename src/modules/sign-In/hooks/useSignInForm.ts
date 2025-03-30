@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {cpfMask} from '../../../core/utils';
 import {UseSignInFormParams} from './types';
 import {signIn} from '../services/signIn';
+import {ErrorHandlerResponse} from '../../../core/api/types';
 
 export const useSignInForm = ({onSuccess}: UseSignInFormParams) => {
   const [cpf, setCpf] = useState('');
@@ -34,7 +35,8 @@ export const useSignInForm = ({onSuccess}: UseSignInFormParams) => {
       setError('');
       onSuccess(response);
     } catch (err) {
-      setError(err as string);
+      const e = err as ErrorHandlerResponse;
+      setError(e.message);
     } finally {
       setLoading(false);
     }

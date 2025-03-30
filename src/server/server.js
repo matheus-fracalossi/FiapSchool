@@ -55,7 +55,7 @@ app.get('/me', authenticate, (req, res) => {
     return res.status(404).json({message: 'Usuário não encontrado'});
   }
   const {senha: _, ...userData} = user;
-  res.json(userData);
+  setTimeout(() => res.json(userData), 2000);
 });
 
 app.listen(PORT, () => {

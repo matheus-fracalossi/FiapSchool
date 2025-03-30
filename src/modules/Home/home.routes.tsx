@@ -4,6 +4,7 @@ import {Header as BaseHeader} from '../../core/components';
 import {useTheme} from 'styled-components/native';
 import {Calendar, FileCheck} from '../../core/assets/icons';
 import {useAuth} from '../../core/contexts';
+import {UserProvider} from './Contexts';
 
 const Tab = createBottomTabNavigator();
 
@@ -32,17 +33,19 @@ export const HomeTabs = () => {
   };
 
   return (
-    <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen
-        name="AGENDA"
-        component={Home}
-        options={{tabBarIcon: Calendar}}
-      />
-      <Tab.Screen
-        name="BOLETIM"
-        component={Grades}
-        options={{tabBarIcon: FileCheck}}
-      />
-    </Tab.Navigator>
+    <UserProvider>
+      <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Screen
+          name="AGENDA"
+          component={Home}
+          options={{tabBarIcon: Calendar}}
+        />
+        <Tab.Screen
+          name="BOLETIM"
+          component={Grades}
+          options={{tabBarIcon: FileCheck}}
+        />
+      </Tab.Navigator>
+    </UserProvider>
   );
 };

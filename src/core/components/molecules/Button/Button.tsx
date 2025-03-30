@@ -9,7 +9,7 @@ export const Button = ({label, loading, disabled, ...rest}: ButtonProps) => {
     <ButtonContainer {...rest} disabled={isDisabled} testID="button">
       <Column height={24} align="center" justify="center">
         {loading ? (
-          <Loader testID="loader" color="background" />
+          <Loader testID="loader" themeColor="background" />
         ) : (
           <Text
             testID="label"
