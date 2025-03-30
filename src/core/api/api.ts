@@ -23,7 +23,12 @@ export const configResponseInterceptor = (clearToken: () => Promise<void>) => {
   api.interceptors.response.use(
     response => response,
     async (error: ErrorHandlerResponse) => {
-      if (!error.status || error.status === 401) {
+      if (
+        !error.status ||
+        error.status === 401 ||
+        error.status === 403 ||
+        error.status === 500
+      ) {
         await clearToken();
       }
 

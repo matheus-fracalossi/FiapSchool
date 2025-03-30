@@ -35,7 +35,6 @@ export const UserProvider = ({children}: PropsWithChildren) => {
         setStudent(response.alunos[0]);
       } catch (err) {
         const e = err as ErrorHandlerResponse;
-        setUser(null);
         Alert.alert('Ops!', e.message);
       } finally {
         setLoading(false);

@@ -26,9 +26,7 @@ app.post('/sign-in', (req, res) => {
       .json({message: 'Usuário ou senha inválida. \n Pode tentar novamente?'});
   }
 
-  const token = jwt.sign({id: user.id, cpf: user.cpf}, SECRET_KEY, {
-    expiresIn: '1hr',
-  });
+  const token = jwt.sign({id: user.id, cpf: user.cpf}, SECRET_KEY);
 
   setTimeout(() => res.json({token}), 2000);
 });

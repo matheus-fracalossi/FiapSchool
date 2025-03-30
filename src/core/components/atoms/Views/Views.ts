@@ -26,12 +26,23 @@ const sharedViewProps = css<ViewProps>`
     ${props.mb ? `margin-bottom: ${props.mb}px;` : ''}
     ${props.ml ? `margin-left: ${props.ml}px;` : ''}
     ${props.mr ? `margin-right: ${props.mr}px;` : ''}
+    ${props.position ? `position: ${props.position};` : ''}
+    ${props.position ? `position: ${props.position};` : ''}
     ${
       props.height
         ? `height: ${
             typeof props.height === 'number'
               ? `${props.height}px`
               : props.height
+          };`
+        : ''
+    }
+    ${
+      props.maxHeight
+        ? `max-height: ${
+            typeof props.maxHeight === 'number'
+              ? `${props.maxHeight}px`
+              : props.maxHeight
           };`
         : ''
     }

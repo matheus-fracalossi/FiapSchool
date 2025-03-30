@@ -1,8 +1,15 @@
 import {useState} from 'react';
-import {Background, Column, Dropdown, Text} from '../../../core/components';
+import {
+  Background,
+  Column,
+  Dropdown,
+  Row,
+  Text,
+} from '../../../core/components';
 import {useUser} from '../Contexts';
 import {AgendaType} from '../Contexts/types';
 import {formatDate} from '../../../core/utils';
+import {FlatList} from 'react-native';
 
 export const Home = () => {
   const {user, student} = useUser();
@@ -11,6 +18,11 @@ export const Home = () => {
   const [date, setDate] = useState<AgendaType | null>(null);
 
   const handleToggleDropdown = () => setDropdownOpened(prev => !prev);
+
+  const handleSelectDate = (date: AgendaType) => {
+    setDate(date);
+    setDropdownOpened(false);
+  };
 
   return (
     <Background p="16px 24px 0px" gap={64}>
@@ -43,7 +55,20 @@ export const Home = () => {
           onPress={handleToggleDropdown}
           value={date}
           renderValue={agenda => formatDate(agenda.dia) ?? ''}
-          onValueSelect={setDate}
+          onValueSelect={handleSelectDate}
+        />
+        <FlatList
+          data={date?.aulas}
+          contentContainerStyle={{gap: 16}}
+          renderItem={({item}) => (
+            <Row gap={8}>
+              <Text>⚬</Text>
+              <Column gap={4}>
+                <Text size="small">{item.horario}</Text>
+                <Text weight="bold">{item.disciplina}</Text>
+              </Column>
+            </Row>
+          )}
         />
       </Column>
     </Background>

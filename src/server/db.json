@@ -3,7 +3,7 @@
     "id": 1,
     "cpf": "96929456004",
     "email": "gustavo-da-silva@example.com",
-    "senha": "123456",
+    "senha": "96929456004",
     "primeiroNome": "Gustavo",
     "sobrenome": "da Silva",
     "alunos": [
