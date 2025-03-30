@@ -17,7 +17,13 @@ export const RootStack = () => {
     <NavigationContainer>
       <Navigator screenOptions={rootStackOptions}>
         {!isAuthenticated ? (
-          <Screen name="SignIn" component={SignIn} />
+          <Screen
+            name="SignIn"
+            component={SignIn}
+            options={{
+              animationTypeForReplace: !isAuthenticated ? 'pop' : 'push',
+            }}
+          />
         ) : (
           <Screen name="HomeTabs" component={HomeTabs} />
         )}

@@ -28,7 +28,10 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
     setUserToken(token);
   };
 
-  const clearUserToken = () => removeData(StoreKeys.USER_TOKEN);
+  const clearUserToken = async () => {
+    await removeData(StoreKeys.USER_TOKEN);
+    setUserToken(null);
+  };
 
   useEffect(() => {
     const loadUser = async () => {

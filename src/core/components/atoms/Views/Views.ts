@@ -51,7 +51,9 @@ export const Column = styled.View<ViewProps>`
   ${sharedViewProps}
 `;
 
-export const Row = styled(Column)``;
+export const Row = styled(Column)`
+  flex-direction: row;
+`;
 
 export const SafeAreaBackground = styled(SafeAreaView)<ViewProps>`
   flex: 1;

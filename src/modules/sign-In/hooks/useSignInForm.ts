@@ -14,6 +14,10 @@ export const useSignInForm = ({onSuccess}: UseSignInFormParams) => {
   const handleApplyCpfMask = (input: string) => {
     const onlyNumbers = input.replace(/\D/g, '');
 
+    if (onlyNumbers.length > 11) {
+      return;
+    }
+
     const maskedCpf = cpfMask(onlyNumbers);
 
     setCpf(maskedCpf);
