@@ -1,13 +1,10 @@
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import {Image, Row} from '../../atoms';
 import {Link} from '../Link';
-import {useAuth} from '../../../contexts';
 import {Exit} from '../../../assets/icons';
 
-export const Header = () => {
+export const Header = ({onPress}: {onPress: () => void}) => {
   const {top} = useSafeAreaInsets();
-
-  const {clearUserToken} = useAuth();
 
   return (
     <Row bg="background" p={`${top + 16}px 16px 16px`} justify="space-between">
@@ -21,7 +18,7 @@ export const Header = () => {
           TROCAR PERFIL
         </Link>
         <Row align="center" justify="center" gap={4}>
-          <Link onPress={clearUserToken} size="small">
+          <Link onPress={onPress} size="small">
             SAIR
           </Link>
           <Exit />

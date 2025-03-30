@@ -1,15 +1,48 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Home} from './screens';
-import {Header} from '../../core/components';
+import {Grades, Home} from './screens';
+import {Header as BaseHeader} from '../../core/components';
+import {useTheme} from 'styled-components/native';
+import {Calendar, FileCheck} from '../../core/assets/icons';
+import {useAuth} from '../../core/contexts';
 
 const Tab = createBottomTabNavigator();
 
+const getHeader = (clearUserToken: () => void) => () =>
+  <BaseHeader onPress={clearUserToken} />;
+
 export const HomeTabs = () => {
-  const screenOptions = {header: Header};
+  const {colors, typography} = useTheme();
+
+  const {clearUserToken} = useAuth();
+
+  const Header = getHeader(clearUserToken);
+
+  const screenOptions = {
+    header: Header,
+
+    tabBarStyle: {
+      backgroundColor: colors.lighterBackground,
+    },
+    tabBarActiveTintColor: colors.cta,
+    tabBarInactiveTintColor: colors.text.primary,
+    tabBarLabelStyle: {
+      fontFamily: typography.weights.regular,
+      fontSize: typography.sizes.small,
+    },
+  };
 
   return (
     <Tab.Navigator screenOptions={screenOptions}>
-      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen
+        name="AGENDA"
+        component={Home}
+        options={{tabBarIcon: Calendar}}
+      />
+      <Tab.Screen
+        name="BOLETIM"
+        component={Grades}
+        options={{tabBarIcon: FileCheck}}
+      />
     </Tab.Navigator>
   );
 };
