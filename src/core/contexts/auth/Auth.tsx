@@ -6,13 +6,14 @@ import React, {
   useEffect,
 } from 'react';
 
-import {readData, storeData} from '../../local-storage';
+import {readData, removeData, storeData} from '../../local-storage';
 import {StoreKeys} from '../../local-storage/types';
 
 interface AuthContextType {
   userToken: string | null;
   isAuthenticated: boolean;
   storeUserToken: (token: string) => Promise<void>;
+  clearUserToken: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
@@ -27,6 +28,8 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
     setUserToken(token);
   };
 
+  const clearUserToken = () => removeData(StoreKeys.USER_TOKEN);
+
   useEffect(() => {
     const loadUser = async () => {
       const token = await readData(StoreKeys.USER_TOKEN);
@@ -40,7 +43,8 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{userToken, isAuthenticated, storeUserToken}}>
+    <AuthContext.Provider
+      value={{userToken, isAuthenticated, storeUserToken, clearUserToken}}>
       {children}
     </AuthContext.Provider>
   );

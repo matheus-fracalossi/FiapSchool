@@ -2,18 +2,25 @@ import * as React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {SignIn} from '../../modules/sign-In';
 import {RootStackParamList} from './types';
+import {HomeTabs, SignIn} from '../../modules';
+import {useAuth} from '../../core/contexts';
 
 const {Navigator, Screen} = createNativeStackNavigator<RootStackParamList>();
 
 const rootStackOptions = {headerShown: false};
 
 export const RootStack = () => {
+  const {isAuthenticated} = useAuth();
+
   return (
     <NavigationContainer>
       <Navigator screenOptions={rootStackOptions}>
-        <Screen name="SignIn" component={SignIn} />
+        {!isAuthenticated ? (
+          <Screen name="SignIn" component={SignIn} />
+        ) : (
+          <Screen name="HomeTabs" component={HomeTabs} />
+        )}
       </Navigator>
     </NavigationContainer>
   );
