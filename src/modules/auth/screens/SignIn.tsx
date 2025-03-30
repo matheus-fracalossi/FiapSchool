@@ -1,24 +1,25 @@
-import {useState} from 'react';
 import {
   Button,
   Column,
   Image,
   Input,
   SafeAreaBackground,
+  Text,
 } from '../../../core/components';
-import {cpfMask} from '../../../core/utils';
+
+import {useSignInForm} from '../hooks';
 
 export const SignIn = () => {
-  const [cpf, setCpf] = useState('');
-  const [password, setPassord] = useState('');
-
-  const applyMask = (input: string) => {
-    const onlyNumbers = input.replace(/\D/g, '');
-
-    const maskedCpf = cpfMask(onlyNumbers);
-
-    setCpf(maskedCpf);
-  };
+  const {
+    cpf,
+    handleApplyCpfMask,
+    password,
+    setPassword,
+    error,
+    isLoading,
+    submitForm,
+    isSubmitFormDisabled,
+  } = useSignInForm({onSuccess: () => {}});
 
   return (
     <SafeAreaBackground>
@@ -33,18 +34,28 @@ export const SignIn = () => {
           <Input
             title="CPF"
             value={cpf}
-            onChangeText={applyMask}
+            onChangeText={handleApplyCpfMask}
             maxLength={14}
           />
           <Input
             title="SENHA"
             value={password}
-            onChangeText={setPassord}
+            onChangeText={setPassword}
             secureTextEntry
           />
+          {error && (
+            <Text textAlign="center" weight="medium" color="cta">
+              {error}
+            </Text>
+          )}
         </Column>
       </Column>
-      <Button label="FAZER LOGIN" />
+      <Button
+        label="FAZER LOGIN"
+        loading={isLoading}
+        onPress={submitForm}
+        disabled={isSubmitFormDisabled}
+      />
     </SafeAreaBackground>
   );
 };

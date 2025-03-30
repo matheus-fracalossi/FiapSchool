@@ -1,1 +1,1 @@
-export * from './cpf-mask';
+export * from './cpf-utils';

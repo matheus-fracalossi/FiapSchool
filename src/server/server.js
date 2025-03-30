@@ -15,20 +15,22 @@ const getUsers = () => {
   return users;
 };
 
-app.post('/login', (req, res) => {
-  const {cpf, senha} = req.body;
+app.post('/sign-in', (req, res) => {
+  const {cpf, password} = req.body;
   const users = getUsers();
 
-  const user = users.find(u => u.cpf === cpf && u.senha === senha);
+  const user = users.find(u => u.cpf === cpf && u.senha === password);
   if (!user) {
-    return res.status(401).json({message: 'Credenciais inválidas'});
+    return res
+      .status(401)
+      .json({message: 'Usuário ou senha inválida. \n Pode tentar novamente?'});
   }
 
   const token = jwt.sign({id: user.id, cpf: user.cpf}, SECRET_KEY, {
     expiresIn: '1hr',
   });
 
-  res.json({token});
+  setTimeout(() => res.json({token}), 2000);
 });
 
 const authenticate = (req, res, next) => {

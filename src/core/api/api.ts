@@ -1,5 +1,5 @@
 import {API_URL} from '@env';
-import axios, {AxiosInstance, AxiosResponse} from 'axios';
+import axios, {AxiosResponse} from 'axios';
 import {handleApiError} from './errorHandler';
 import {ErrorHandlerType} from './types';
 
@@ -12,15 +12,9 @@ const onError = (error: ErrorHandlerType) => {
   return Promise.reject(errorMessage);
 };
 
-const setupInterceptors = (instance: AxiosInstance): AxiosInstance => {
-  instance.interceptors.response.use(onResponse, onError);
-
-  return instance;
-};
-
-const baseApi = axios.create({
+export const api = axios.create({
   baseURL: API_URL,
   timeout: 30000,
 });
 
-export const api = setupInterceptors(baseApi);
+api.interceptors.response.use(onResponse, onError);

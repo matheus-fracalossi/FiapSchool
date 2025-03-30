@@ -7,4 +7,5 @@ export const Text = styled.Text<TextProps>`
     font-family: ${theme.typography.weights[weight]};
     font-size: ${theme.typography.sizes[size]}px;
   `}
+  ${({textAlign}) => (textAlign ? `text-align: ${textAlign};` : '')}
 `;
