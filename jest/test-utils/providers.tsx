@@ -1,6 +1,6 @@
 import {ThemeProvider} from 'styled-components/native';
 import {render} from '@testing-library/react-native';
-import {defaultTheme} from '../themes';
+import {defaultTheme} from '../../src/core/themes';
 import {JSX} from 'react';
 
 type ComponentTreeType = {

@@ -6,10 +6,13 @@ import {
   SafeAreaBackground,
   Text,
 } from '../../../core/components';
+import {useAuth} from '../../../core/contexts';
 
 import {useSignInForm} from '../hooks';
 
 export const SignIn = () => {
+  const {storeUserToken} = useAuth();
+
   const {
     cpf,
     handleApplyCpfMask,
@@ -19,7 +22,11 @@ export const SignIn = () => {
     isLoading,
     submitForm,
     isSubmitFormDisabled,
-  } = useSignInForm({onSuccess: () => {}});
+  } = useSignInForm({
+    onSuccess: res => {
+      storeUserToken(res.token);
+    },
+  });
 
   return (
     <SafeAreaBackground>

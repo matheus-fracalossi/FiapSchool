@@ -1,5 +1,5 @@
 import {fireEvent} from '@testing-library/react-native';
-import {renderComponent} from '../../../../test-utils';
+import {renderComponent} from '../../../../../../jest/test-utils';
 import {defaultTheme} from '../../../../themes';
 import {Button} from '../Button';
 import {ButtonProps} from '../types';

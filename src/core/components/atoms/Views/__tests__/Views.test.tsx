@@ -1,4 +1,4 @@
-import {renderComponent} from '../../../../test-utils';
+import {renderComponent} from '../../../../../../jest/test-utils';
 import {defaultTheme} from '../../../../themes';
 import {SafeAreaBackground} from '../Views';
 
