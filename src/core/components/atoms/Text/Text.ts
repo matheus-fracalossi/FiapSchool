@@ -14,4 +14,5 @@ export const Text = styled.Text<TextProps>`
     font-size: ${theme.typography.sizes[size]}px;
     text-align: ${textAlign};
   `}
+  ${({flex}) => flex && `flex: ${flex}`}
 `;

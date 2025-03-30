@@ -5,21 +5,26 @@ import React, {
   PropsWithChildren,
   useEffect,
 } from 'react';
-import {UserType} from './types';
+import {AlunoType, UserType} from './types';
 import {fetchUser} from '../services/fetchUser';
 import {Alert} from 'react-native';
 import {FullScreenLoader} from '../../../core/components';
 import {ErrorHandlerResponse} from '../../../core/api/types';
 
 interface AuthContextType {
-  user: UserType | null;
+  user: UserType;
+  student: AlunoType;
+  setStudent: (student: AlunoType) => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export const UserProvider = ({children}: PropsWithChildren) => {
   const [user, setUser] = useState<UserType | null>(null);
+  const [student, setStudent] = useState<AlunoType | null>(null);
   const [isLoading, setLoading] = useState(false);
+
+  const shouldShowLoader = isLoading || !user || !student;
 
   useEffect(() => {
     const handleFetchUser = async () => {
@@ -27,6 +32,7 @@ export const UserProvider = ({children}: PropsWithChildren) => {
       try {
         const response = await fetchUser();
         setUser(response);
+        setStudent(response.alunos[0]);
       } catch (err) {
         const e = err as ErrorHandlerResponse;
         setUser(null);
@@ -39,9 +45,13 @@ export const UserProvider = ({children}: PropsWithChildren) => {
     handleFetchUser();
   }, []);
 
+  if (shouldShowLoader) {
+    return <FullScreenLoader size="large" color="cta" />;
+  }
+
   return (
-    <AuthContext.Provider value={{user}}>
-      {isLoading ? <FullScreenLoader size="large" color="cta" /> : children}
+    <AuthContext.Provider value={{user, setStudent, student}}>
+      {children}
     </AuthContext.Provider>
   );
 };

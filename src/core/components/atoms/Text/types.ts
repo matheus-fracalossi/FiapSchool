@@ -9,4 +9,5 @@ export type TextProps = {
   weight?: 'regular' | 'medium' | 'bold';
   size?: TextSizeType;
   textAlign?: TextStyle['textAlign'];
+  flex?: TextStyle['flex'];
 };

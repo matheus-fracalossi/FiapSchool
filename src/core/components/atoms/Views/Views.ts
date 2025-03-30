@@ -43,7 +43,7 @@ const sharedViewProps = css<ViewProps>`
         : ''
     }
     ${props.als ? `align-self: ${props.als};` : ''}
-    
+    ${props.zIndex ? `z-index: ${props.zIndex};` : ''}
   `}
 `;
 
@@ -56,6 +56,12 @@ export const Row = styled(Column)`
 `;
 
 export const SafeAreaBackground = styled(SafeAreaView)<ViewProps>`
+  flex: 1;
+  background-color: ${({theme}) => theme.colors.background};
+  ${sharedViewProps}
+`;
+
+export const Background = styled(Column)`
   flex: 1;
   background-color: ${({theme}) => theme.colors.background};
   ${sharedViewProps}

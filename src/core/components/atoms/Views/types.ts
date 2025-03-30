@@ -41,4 +41,5 @@ export type ViewProps = {
   height?: FlexStyle['height'];
   width?: FlexStyle['width'];
   als?: FlexStyle['alignSelf'];
+  zIndex?: ViewStyle['zIndex'];
 };
