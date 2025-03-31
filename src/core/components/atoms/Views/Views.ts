@@ -15,6 +15,7 @@ const sharedViewProps = css<ViewProps>`
     ${props.bbw ? `border-bottom-width: ${props.bbw}px;` : ''}
     ${props.blw ? `border-left-width: ${props.blw}px;` : ''}
     ${props.brw ? `border-right-width: ${props.brw}px;` : ''}
+    ${props.bc ? `border-color: ${theme.colors[props.bc]};` : ''}
     ${props.p ? `padding: ${props.p};` : ''}
     ${props.pt ? `padding-top: ${props.pt}px;` : ''}
     ${props.pb ? `padding-bottom: ${props.pb}px;` : ''}

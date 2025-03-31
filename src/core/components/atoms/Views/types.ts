@@ -15,6 +15,7 @@ export type ViewProps = {
 
   flex?: FlexStyle['flex'];
   bg?: ViewColorType;
+  bc?: ViewColorType;
   gap?: FlexStyle['gap'];
 
   br?: ViewStyle['borderRadius'];

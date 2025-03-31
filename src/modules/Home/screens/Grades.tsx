@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {
   Accordion,
   Background,
@@ -7,9 +7,9 @@ import {
   Text,
 } from '../../../core/components';
 import {ProfileInfo} from '../Components';
+import {FlatList, ScrollView} from 'react-native';
 import {useUser} from '../Contexts';
 import {BoletimType} from '../Contexts/types';
-import {FlatList, ScrollView} from 'react-native';
 
 export const Grades = () => {
   const {user, student} = useUser();
@@ -22,6 +22,12 @@ export const Grades = () => {
   const [studentClass, setStudentClass] = useState<BoletimType>(
     student.boletim[0],
   );
+
+  useEffect(() => {
+    setStudentClass(student.boletim[0]);
+    clearOpenedSecctionId();
+    clearClassGradeAccordionId();
+  }, [student]);
 
   const clearOpenedSecctionId = () => setOpenedSectionId(null);
   const clearClassGradeAccordionId = () => setClassGradeAccordionId(null);

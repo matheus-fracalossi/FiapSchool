@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {
   Background,
   Column,
@@ -7,11 +7,11 @@ import {
   Row,
   Text,
 } from '../../../core/components';
-import {useUser} from '../Contexts';
-import {AgendaType} from '../Contexts/types';
 import {formatDate} from '../../../core/utils';
 import {FlatList, ScrollView} from 'react-native';
 import {ProfileInfo} from '../Components';
+import {useUser} from '../Contexts';
+import {AgendaType} from '../Contexts/types';
 
 export const Home = () => {
   const {user, student} = useUser();
@@ -19,10 +19,15 @@ export const Home = () => {
   const [isDropdownOpened, setDropdownOpened] = useState(false);
   const [date, setDate] = useState<AgendaType | null>(null);
 
+  useEffect(() => {
+    setDropdownOpened(false);
+    setDate(null);
+  }, [student]);
+
   const handleToggleDropdown = () => setDropdownOpened(prev => !prev);
 
-  const handleSelectDate = (date: AgendaType) => {
-    setDate(date);
+  const handleSelectDate = (dateParam: AgendaType) => {
+    setDate(dateParam);
     setDropdownOpened(false);
   };
 
@@ -48,6 +53,7 @@ export const Home = () => {
               onValueSelect={handleSelectDate}
             />
             <FlatList
+              scrollEnabled={false}
               data={date?.aulas}
               contentContainerStyle={{gap: 16}}
               bounces={false}

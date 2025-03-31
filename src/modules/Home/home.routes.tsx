@@ -13,7 +13,6 @@ const getHeader = (clearUserToken: () => void) => () =>
 
 export const HomeTabs = () => {
   const {colors, typography} = useTheme();
-
   const {clearUserToken} = useAuth();
 
   const Header = getHeader(clearUserToken);
