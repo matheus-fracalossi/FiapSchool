@@ -1,4 +1,8 @@
-import {FlatList, Pressable, TouchableOpacityProps} from 'react-native';
+import {
+  FlatList,
+  TouchableHighlight,
+  TouchableOpacityProps,
+} from 'react-native';
 import {ChevronDown, ChevronUp} from '../../../assets/icons';
 import {Column, Row, Text} from '../../atoms';
 import {DropdownProps} from './types';
@@ -24,12 +28,12 @@ export const Dropdown = <T,>({
 
   return (
     <Column onLayout={e => setDropdownHeight(e.nativeEvent.layout.height)}>
-      <Pressable onPress={onPress}>
+      <TouchableHighlight onPress={onPress}>
         <Row bg="lighterBackground" p="12px 16px" br={8} align="center">
           <Text flex={1}>{value ? renderTitle(value) : placeholder}</Text>
           {!opened ? <ChevronDown /> : <ChevronUp />}
         </Row>
-      </Pressable>
+      </TouchableHighlight>
       {opened && (
         <Column
           mt={DropdownHeight + 8}
