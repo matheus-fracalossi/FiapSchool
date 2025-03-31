@@ -45,6 +45,7 @@ export const Dropdown = <T,>({
           position="absolute"
           maxHeight={300}>
           <FlatList
+            showsVerticalScrollIndicator={false}
             scrollEnabled={opened}
             bounces={false}
             data={options}

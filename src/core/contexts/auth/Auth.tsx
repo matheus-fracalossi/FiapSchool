@@ -23,10 +23,11 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
   const loadUser = async () => {
     const token = await readData(StoreKeys.USER_TOKEN);
 
-    if (token) {
-      setRequestToken(token);
-      setUserToken(token);
+    if (!token) {
+      return setUserToken('');
     }
+    setRequestToken(token);
+    setUserToken(token);
   };
 
   const storeUserToken = async (token: string) => {
