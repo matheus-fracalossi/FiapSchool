@@ -23,10 +23,9 @@ export const Header = ({onPress}: HeaderProps) => {
           </Link>
         )}
         <Row align="center" justify="center" gap={4}>
-          <Link onPress={onPress} size="small">
-            SAIR
+          <Link onPress={onPress} size="small" textAlign="center">
+            SAIR <Exit />
           </Link>
-          <Exit />
         </Row>
       </Row>
     </Row>

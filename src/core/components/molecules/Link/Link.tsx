@@ -1,9 +1,9 @@
-import {TouchableOpacity} from 'react-native';
+import {TouchableHighlight} from 'react-native';
 import {LinkProps} from './types';
 import {Text} from '../../atoms';
 
 export const Link = ({onPress, ...rest}: LinkProps) => (
-  <TouchableOpacity onPress={onPress}>
+  <TouchableHighlight onPress={onPress}>
     <Text {...rest} />
-  </TouchableOpacity>
+  </TouchableHighlight>
 );
