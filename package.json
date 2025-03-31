@@ -1,5 +1,5 @@
 {
-  "name": "FiapSchool",
+  "name": "fiap-school",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,11 +7,22 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky",
+    "server:start": "node ./src/server/server.js"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-navigation/bottom-tabs": "^7.3.3",
+    "@react-navigation/native": "^7.0.19",
+    "@react-navigation/native-stack": "^7.3.3",
+    "axios": "^1.8.4",
     "react": "19.0.0",
     "react-native": "0.78.1",
+    "react-native-bootsplash": "^6.3.4",
+    "react-native-safe-area-context": "^5.3.0",
+    "react-native-screens": "^4.10.0",
+    "react-native-svg": "^15.11.2",
     "styled-components": "^6.1.16"
   },
   "devDependencies": {
@@ -25,14 +36,29 @@
     "@react-native/eslint-config": "0.78.1",
     "@react-native/metro-config": "0.78.1",
     "@react-native/typescript-config": "0.78.1",
+    "@testing-library/react-native": "^13.2.0",
     "@types/jest": "^29.5.13",
     "@types/react": "^19.0.0",
     "@types/react-test-renderer": "^19.0.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "eslint": "^8.19.0",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "husky": "^9.1.7",
     "jest": "^29.6.3",
+    "jsonwebtoken": "^9.0.2",
+    "lint-staged": "^15.5.0",
     "prettier": "2.8.8",
+    "react-native-dotenv": "^3.4.11",
     "react-test-renderer": "19.0.0",
     "typescript": "5.0.4"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint",
+      "yarn test --bail --findRelatedTests"
+    ]
   },
   "engines": {
     "node": ">=18"
