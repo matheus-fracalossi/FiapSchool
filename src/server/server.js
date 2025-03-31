@@ -42,7 +42,7 @@ const authenticate = (req, res, next) => {
     req.user = decoded;
     next();
   } catch {
-    res.status(403).json({message: 'Token inválido'});
+    res.status(401).json({message: 'Token inválido'});
   }
 };
 

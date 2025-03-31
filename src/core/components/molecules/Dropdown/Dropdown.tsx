@@ -17,7 +17,7 @@ export const Dropdown = <T,>({
   placeholder,
   value,
   options,
-  renderValue,
+  renderTitle,
   onValueSelect,
 }: DropdownProps<T>) => {
   const [DropdownHeight, setDropdownHeight] = useState(0);
@@ -26,7 +26,7 @@ export const Dropdown = <T,>({
     <Column onLayout={e => setDropdownHeight(e.nativeEvent.layout.height)}>
       <Pressable onPress={onPress}>
         <Row bg="lighterBackground" p="12px 16px" br={8} align="center">
-          <Text flex={1}>{value ? renderValue(value) : placeholder}</Text>
+          <Text flex={1}>{value ? renderTitle(value) : placeholder}</Text>
           {!opened ? <ChevronDown /> : <ChevronUp />}
         </Row>
       </Pressable>
@@ -41,10 +41,11 @@ export const Dropdown = <T,>({
           position="absolute"
           maxHeight={300}>
           <FlatList
+            bounces={false}
             data={options}
             renderItem={({item: option}) => (
               <DropdownItem onPress={() => onValueSelect(option)}>
-                {renderValue(option)}
+                {renderTitle(option)}
               </DropdownItem>
             )}
           />

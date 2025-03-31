@@ -72,8 +72,6 @@ export const SafeAreaBackground = styled(SafeAreaView)<ViewProps>`
   ${sharedViewProps}
 `;
 
-export const Background = styled(Column)`
-  flex: 1;
-  background-color: ${({theme}) => theme.colors.background};
-  ${sharedViewProps}
-`;
+export const Background = styled(SafeAreaBackground).attrs({
+  edges: ['left', 'right'],
+})``;

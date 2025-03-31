@@ -2,6 +2,7 @@ export const defaultTheme = {
   colors: {
     background: '#000000',
     lighterBackground: '#262626',
+    lightestBackground: '#4D4D4D',
     cta: '#29F4D5',
     blur: '#525252',
     text: {
