@@ -11,18 +11,12 @@ const {Navigator, Screen} = createNativeStackNavigator<RootStackParamList>();
 const rootStackOptions = {headerShown: false};
 
 export const RootStack = () => {
-  const {isAuthenticated, finishedAuthenticating} = useAuth();
-
-  if (!finishedAuthenticating) {
-    return null;
-  }
+  const {isAuthenticated} = useAuth();
 
   return (
     <NavigationContainer>
       <Navigator screenOptions={rootStackOptions}>
-        {isAuthenticated ? (
-          <Screen name="HomeTabs" component={HomeTabs} />
-        ) : (
+        {!isAuthenticated ? (
           <Screen
             name="SignIn"
             component={SignIn}
@@ -30,6 +24,8 @@ export const RootStack = () => {
               animationTypeForReplace: !isAuthenticated ? 'pop' : 'push',
             }}
           />
+        ) : (
+          <Screen name="HomeTabs" component={HomeTabs} />
         )}
       </Navigator>
     </NavigationContainer>

@@ -1,3 +1,4 @@
+import {Platform} from 'react-native';
 import styled from 'styled-components/native';
 
 export const TextInput = styled.TextInput.attrs(({theme}) => {
@@ -5,7 +6,7 @@ export const TextInput = styled.TextInput.attrs(({theme}) => {
   return {
     cursorColor: primary,
     placeholderTextColor: primary,
-    selectionColor: primary,
+    selectionColor: Platform.OS === 'android' ? primary + '80' : primary,
   };
 })<{isFocused: boolean}>`
   font-family: ${({theme}) => theme.typography.weights.regular};

@@ -42,7 +42,7 @@ export const AuthProvider = ({children}: PropsWithChildren) => {
 
   useEffect(() => {
     if (finishedAuthenticating) {
-      BootSplash.hide({fade: true});
+      setTimeout(() => BootSplash.hide({fade: true}), 1000);
     }
   }, [finishedAuthenticating]);
 
