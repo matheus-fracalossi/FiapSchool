@@ -1,20 +1,21 @@
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {Image, Row} from '../../atoms';
-import {Link} from '../Link';
-import {Exit} from '../../../assets/icons';
-import {HeaderProps} from './types';
-import {useUser} from '../../../../modules/Home/Contexts';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { Image, Row } from '../../atoms';
+import { Link } from '../Link';
+import { Exit } from '../../../assets/icons';
+import { HeaderProps } from './types';
+import { useUser } from '../../../../modules/Home/Contexts';
 
-export const Header = ({onPress}: HeaderProps) => {
-  const {top} = useSafeAreaInsets();
-  const {openModal, user} = useUser();
+export const Header = ({ onPress }: HeaderProps) => {
+  const { top } = useSafeAreaInsets();
+  const { openModal, user } = useUser();
 
   return (
     <Row bg="background" p={`${top + 16}px 16px 16px`} justify="space-between">
       <Image
         source={require('../../../assets/images/logo.png')}
         width={100}
-        height={16}
+        height={20}
+        resizeMode='contain'
       />
       <Row gap={24}>
         {user.alunos.length && (
