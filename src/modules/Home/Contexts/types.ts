@@ -2,46 +2,45 @@ export type UserType = {
   id: number;
   cpf: string;
   email: string;
-  senha: string;
-  primeiroNome: string;
-  sobrenome: string;
-  alunos: AlunoType[];
-  boletim: BoletimType[];
+  password: string;
+  firstName: string;
+  lastName: string;
+  students: StudentType[];
 };
 
-export type AlunoType = {
+export type StudentType = {
   rm: number;
-  turma: string;
-  periodo: string;
-  primeiroNome: string;
-  sobrenome: string;
-  agenda: AgendaType[];
-  boletim: BoletimType[];
+  classGroup: string;
+  period: string;
+  firstName: string;
+  lastName: string;
+  schedule: ScheduleType[];
+  reportCard: ReportCardType[];
 };
 
-export type AgendaType = {
-  dia: string;
-  aulas: AulaType[];
+export type ScheduleType = {
+  day: string;
+  classes: ClassType[];
 };
 
-export type AulaType = {
-  horario: string;
-  disciplina: string;
+export type ClassType = {
+  time: string;
+  subject: string;
 };
 
-export type BoletimType = {
-  ano: string;
-  turma: string;
-  trimestres: TrimestreType[];
+export type ReportCardType = {
+  year: string;
+  classGroup: string;
+  terms: TermType[];
 };
 
-export type TrimestreType = {
-  trimestre: number;
-  disciplinas: DisciplinaType[];
+export type TermType = {
+  term: number;
+  subjects: SubjectType[];
 };
 
-export type DisciplinaType = {
-  nome: string;
-  nota: number | null;
-  faltas: number | null;
+export type SubjectType = {
+  name: string;
+  grade: number | null;
+  absences: number | null;
 };

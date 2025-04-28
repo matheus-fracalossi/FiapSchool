@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import {
   Accordion,
   Background,
@@ -6,46 +6,46 @@ import {
   Dropdown,
   Text,
 } from '../../../core/components';
-import {ProfileInfo} from '../Components';
-import {FlatList, ScrollView} from 'react-native';
-import {useUser} from '../Contexts';
-import {BoletimType} from '../Contexts/types';
+import { ProfileInfo } from '../Components';
+import { FlatList, ScrollView } from 'react-native';
+import { useUser } from '../Contexts';
+import { ReportCardType } from '../Contexts/types';
 
 export const Grades = () => {
-  const {user, student} = useUser();
+  const { user, student } = useUser();
 
-  const [openedScctionId, setOpenedSectionId] = useState<string | null>(null);
+  const [openedSectionId, setOpenedSectionId] = useState<string | null>(null);
   const [classGradeAccordionId, setClassGradeAccordionId] = useState<
     number | null
   >(null);
 
-  const [studentClass, setStudentClass] = useState<BoletimType>(
-    student.boletim[0],
+  const [studentClass, setStudentClass] = useState<ReportCardType>(
+    student.reportCard[0],
   );
 
   useEffect(() => {
-    setStudentClass(student.boletim[0]);
-    clearOpenedSecctionId();
+    setStudentClass(student.reportCard[0]);
+    clearOpenedSectionId();
     clearClassGradeAccordionId();
   }, [student]);
 
-  const clearOpenedSecctionId = () => setOpenedSectionId(null);
+  const clearOpenedSectionId = () => setOpenedSectionId(null);
   const clearClassGradeAccordionId = () => setClassGradeAccordionId(null);
 
-  const handdleSetStudentClass = (boletim: BoletimType) => {
-    setStudentClass(boletim);
-    clearOpenedSecctionId();
+  const handleSetStudentClass = (reportCard: ReportCardType) => {
+    setStudentClass(reportCard);
+    clearOpenedSectionId();
   };
 
   const handlePressSection = (id: string) => {
-    if (id === openedScctionId) {
-      return clearOpenedSecctionId();
+    if (id === openedSectionId) {
+      return clearOpenedSectionId();
     }
     setOpenedSectionId(id);
     clearClassGradeAccordionId();
   };
 
-  const handleclassGradeAccordionId = (id: number) => {
+  const handleClassGradeAccordionId = (id: number) => {
     if (id === classGradeAccordionId) {
       return clearClassGradeAccordionId();
     }
@@ -56,43 +56,41 @@ export const Grades = () => {
     <Background p="16px 24px 32px">
       <ScrollView
         bounces={false}
-        scrollEnabled={openedScctionId !== 'dropdown'}
+        scrollEnabled={openedSectionId !== 'dropdown'}
         showsVerticalScrollIndicator={false}>
         <Column gap={64}>
-          <ProfileInfo userName={user.primeiroNome} student={student} />
+          <ProfileInfo userName={user.firstName} student={student} />
           <Text size="medium" weight="bold" color="cta" textAlign="center">
-            BOLETIM
+            REPORT CARD
           </Text>
           <Dropdown
-            options={student.boletim}
-            opened={openedScctionId === 'dropdown'}
+            options={student.reportCard}
+            opened={openedSectionId === 'dropdown'}
             onPress={() => handlePressSection('dropdown')}
             value={studentClass}
-            renderTitle={classInfo => `${classInfo.turma} - ${classInfo.ano}`}
-            onValueSelect={handdleSetStudentClass}
+            renderTitle={classInfo => `${classInfo.classGroup} - ${classInfo.year}`}
+            onValueSelect={handleSetStudentClass}
           />
           <FlatList
             showsVerticalScrollIndicator={false}
             scrollEnabled={false}
-            data={studentClass.trimestres}
-            contentContainerStyle={{gap: 16}}
+            data={studentClass.terms}
+            contentContainerStyle={{ gap: 16 }}
             bounces={false}
-            renderItem={({item, index}) => (
+            renderItem={({ item, index }) => (
               <Accordion
-                opened={openedScctionId === `accordion-${index}`}
+                opened={openedSectionId === `accordion-${index}`}
                 onPress={() => handlePressSection(`accordion-${index}`)}
-                title={`${item.trimestre}º TRIMESTRE`}>
+                title={`${item.term}º TERM`}>
                 <Column gap={16}>
-                  {item.disciplinas.map((disciplina, disciplinaIndex) => (
+                  {item.subjects.map((subject, subjectIndex) => (
                     <Accordion.ItemSecondary
-                      key={disciplina.nome}
-                      opened={classGradeAccordionId === disciplinaIndex}
-                      title={disciplina.nome}
-                      onPress={() =>
-                        handleclassGradeAccordionId(disciplinaIndex)
-                      }>
-                      <Text size="small">Nota: {disciplina.nota}</Text>
-                      <Text size="small">Faltas: {disciplina.faltas}</Text>
+                      key={subject.name}
+                      opened={classGradeAccordionId === subjectIndex}
+                      title={subject.name}
+                      onPress={() => handleClassGradeAccordionId(subjectIndex)}>
+                      <Text size="small">Grade: {subject.grade ?? '-'}</Text>
+                      <Text size="small">Absences: {subject.absences ?? '-'}</Text>
                     </Accordion.ItemSecondary>
                   ))}
                 </Column>

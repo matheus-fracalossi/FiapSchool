@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
 import {
   Background,
   Column,
@@ -7,17 +7,17 @@ import {
   Row,
   Text,
 } from '../../../core/components';
-import {formatDate} from '../../../core/utils';
-import {FlatList, ScrollView} from 'react-native';
-import {ProfileInfo} from '../Components';
-import {useUser} from '../Contexts';
-import {AgendaType} from '../Contexts/types';
+import { formatDate } from '../../../core/utils';
+import { FlatList, ScrollView } from 'react-native';
+import { ProfileInfo } from '../Components';
+import { useUser } from '../Contexts';
+import { ScheduleType } from '../Contexts/types';
 
 export const Home = () => {
-  const {user, student} = useUser();
+  const { user, student } = useUser();
 
   const [isDropdownOpened, setDropdownOpened] = useState(false);
-  const [date, setDate] = useState<AgendaType | null>(null);
+  const [date, setDate] = useState<ScheduleType | null>(null);
 
   useEffect(() => {
     setDropdownOpened(false);
@@ -26,7 +26,7 @@ export const Home = () => {
 
   const handleToggleDropdown = () => setDropdownOpened(prev => !prev);
 
-  const handleSelectDate = (dateParam: AgendaType) => {
+  const handleSelectDate = (dateParam: ScheduleType) => {
     setDate(dateParam);
     setDropdownOpened(false);
   };
@@ -38,31 +38,31 @@ export const Home = () => {
         scrollEnabled={!isDropdownOpened}
         showsVerticalScrollIndicator={false}>
         <Column gap={64}>
-          <ProfileInfo userName={user.primeiroNome} student={student} />
+          <ProfileInfo userName={user.firstName} student={student} />
           <Column gap={32}>
             <Text size="medium" weight="bold" color="cta" textAlign="center">
-              AGENDA
+              SCHEDULE
             </Text>
             <Dropdown
-              placeholder="Selecione uma data"
-              options={student.agenda}
+              placeholder="Select a date"
+              options={student.schedule}
               opened={isDropdownOpened}
               onPress={handleToggleDropdown}
               value={date}
-              renderTitle={agenda => formatDate(agenda.dia) ?? ''}
+              renderTitle={schedule => formatDate(schedule.day) ?? ''}
               onValueSelect={handleSelectDate}
             />
             <FlatList
               scrollEnabled={false}
-              data={date?.aulas}
-              contentContainerStyle={{gap: 16}}
+              data={date?.classes}
+              contentContainerStyle={{ gap: 16 }}
               bounces={false}
-              renderItem={({item}) => (
+              renderItem={({ item }) => (
                 <Row gap={8}>
                   <Text>⚬</Text>
                   <Column gap={4}>
-                    <Text size="small">{item.horario}</Text>
-                    <Text weight="bold">{item.disciplina}</Text>
+                    <Text size="small">{item.time}</Text>
+                    <Text weight="bold">{item.subject}</Text>
                   </Column>
                 </Row>
               )}
@@ -74,7 +74,7 @@ export const Home = () => {
                     height={208}
                     resizeMode="contain"
                   />
-                  <Text size="medium">Sem aulas neste dia</Text>
+                  <Text size="medium">No classes on this day</Text>
                 </Column>
               }
             />

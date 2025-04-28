@@ -1,6 +1,7 @@
-import {AlunoType} from '../../../app/routes/Contexts/types';
+import { StudentType } from "../Contexts/types";
+
 
 export type ProfileInfoProps = {
   userName: string;
-  student: AlunoType;
+  student: StudentType;
 };

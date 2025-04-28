@@ -1,4 +1,4 @@
-import {ScrollView} from 'react-native';
+import { ScrollView } from 'react-native';
 import {
   Button,
   Column,
@@ -7,12 +7,11 @@ import {
   SafeAreaBackground,
   Text,
 } from '../../../core/components';
-import {useAuth} from '../../../core/contexts';
-
-import {useSignInForm} from '../hooks';
+import { useAuth } from '../../../core/contexts';
+import { useSignInForm } from '../hooks';
 
 export const SignIn = () => {
-  const {storeUserToken} = useAuth();
+  const { storeUserToken } = useAuth();
 
   const {
     cpf,
@@ -47,7 +46,7 @@ export const SignIn = () => {
               maxLength={14}
             />
             <Input
-              title="SENHA"
+              title="PASSWORD"
               value={password}
               onChangeText={setPassword}
               secureTextEntry
@@ -61,7 +60,7 @@ export const SignIn = () => {
         </Column>
       </ScrollView>
       <Button
-        label="FAZER LOGIN"
+        label="SIGN IN"
         loading={isLoading}
         onPress={submitForm}
         disabled={isSubmitFormDisabled}

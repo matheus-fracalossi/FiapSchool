@@ -1,11 +1,11 @@
-import {ProfileInfoProps} from './types';
-import {Column, Text} from '../../../core/components';
+import { ProfileInfoProps } from './types';
+import { Column, Text } from '../../../core/components';
 
-export const ProfileInfo = ({userName, student}: ProfileInfoProps) => {
+export const ProfileInfo = ({ userName, student }: ProfileInfoProps) => {
   return (
     <Column align="center" gap={32}>
       <Text size="large">
-        Olá,{' '}
+        Hello,{' '}
         <Text size="large" weight="bold">
           {userName.toLocaleUpperCase()}
         </Text>
@@ -13,11 +13,11 @@ export const ProfileInfo = ({userName, student}: ProfileInfoProps) => {
 
       <Column align="center">
         <Text size="medium" weight="medium">
-          {student.primeiroNome.toLocaleUpperCase()}{' '}
-          {student.sobrenome.toLocaleUpperCase()}
+          {student.firstName.toLocaleUpperCase()}{' '}
+          {student.lastName.toLocaleUpperCase()}
         </Text>
         <Text size="medium">
-          {student.turma} - RM {student.rm} - {student.periodo}
+          {student.classGroup} - RM {student.rm} - {student.period}
         </Text>
       </Column>
     </Column>

@@ -5,9 +5,9 @@ import React, {
   PropsWithChildren,
   useEffect,
 } from 'react';
-import {AlunoType, UserType} from './types';
-import {fetchUser} from '../../../modules/Home/services/fetchUser';
-import {Alert, FlatList, Modal} from 'react-native';
+import { StudentType, UserType } from './types';
+import { fetchUser } from '../../../modules/Home/services/fetchUser';
+import { Alert, FlatList, Modal } from 'react-native';
 import {
   Background,
   Card,
@@ -16,23 +16,23 @@ import {
   Link,
   Text,
 } from '../../../core/components';
-import {ErrorHandlerResponse} from '../../../core/api/types';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import { ErrorHandlerResponse } from '../../../core/api/types';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 interface AuthContextType {
   user: UserType;
-  student: AlunoType;
-  setStudent: (student: AlunoType) => void;
+  student: StudentType;
+  setStudent: (student: StudentType) => void;
   openModal: () => void;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-export const UserProvider = ({children}: PropsWithChildren) => {
-  const {top, bottom} = useSafeAreaInsets();
+export const UserProvider = ({ children }: PropsWithChildren) => {
+  const { top, bottom } = useSafeAreaInsets();
 
   const [user, setUser] = useState<UserType | null>(null);
-  const [student, setStudent] = useState<AlunoType | null>(null);
+  const [student, setStudent] = useState<StudentType | null>(null);
   const [isLoading, setLoading] = useState(false);
   const [isModalVisible, setModalVisible] = useState(false);
 
@@ -41,7 +41,7 @@ export const UserProvider = ({children}: PropsWithChildren) => {
   const closeModal = () => setModalVisible(false);
   const openModal = () => setModalVisible(true);
 
-  const handlerSelectStudent = (studentParams: AlunoType) => {
+  const handlerSelectStudent = (studentParams: StudentType) => {
     setStudent(studentParams);
     closeModal();
   };
@@ -52,7 +52,7 @@ export const UserProvider = ({children}: PropsWithChildren) => {
       try {
         const response = await fetchUser();
         setUser(response);
-        setStudent(response.alunos[0]);
+        setStudent(response.students[0]);
       } catch (err) {
         const e = err as ErrorHandlerResponse;
         Alert.alert('Ops!', e.message);
@@ -69,7 +69,7 @@ export const UserProvider = ({children}: PropsWithChildren) => {
   }
 
   return (
-    <AuthContext.Provider value={{user, student, setStudent, openModal}}>
+    <AuthContext.Provider value={{ user, student, setStudent, openModal }}>
       {children}
       <Modal visible={isModalVisible} animationType="fade">
         <Background p={`${top + 20}px 20px ${bottom + 20}px`} gap={32}>
@@ -79,7 +79,7 @@ export const UserProvider = ({children}: PropsWithChildren) => {
               textAlign="right"
               weight="bold"
               onPress={closeModal}>
-              FECHAR{' '}
+              CLOSE{' '}
               <Text color="cta" size="medium" weight="bold">
                 X
               </Text>
@@ -87,18 +87,18 @@ export const UserProvider = ({children}: PropsWithChildren) => {
           </Column>
           <Column flex={1} justify="center" gap={32}>
             <Text textAlign="center" size="large">
-              Escolha o perfil{'\n'}que você quer visualizar
+              Choose the profile{'\n'}you want to view
             </Text>
             <FlatList
-              data={user.alunos}
-              contentContainerStyle={{gap: 16}}
-              renderItem={({item: studentInfo}) => (
+              data={user.students}
+              contentContainerStyle={{ gap: 16 }}
+              renderItem={({ item: studentInfo }) => (
                 <Card
                   disabled={studentInfo.rm === student.rm}
                   onPress={() => handlerSelectStudent(studentInfo)}
                   selected={studentInfo.rm === student.rm}
-                  title={`${studentInfo.primeiroNome}  ${studentInfo.sobrenome}`}
-                  className={`${studentInfo.turma} - RM ${studentInfo.rm} - ${studentInfo.periodo}`}
+                  title={`${studentInfo.firstName} ${studentInfo.lastName}`}
+                  className={`${studentInfo.classGroup} - RM ${studentInfo.rm} - ${studentInfo.period}`}
                 />
               )}
             />

@@ -16,25 +16,25 @@ const getUsers = () => {
 };
 
 app.post('/sign-in', (req, res) => {
-  const {cpf, password} = req.body;
+  const { cpf, password } = req.body;
   const users = getUsers();
 
-  const user = users.find(u => u.cpf === cpf && u.senha === password);
+  const user = users.find(u => u.cpf === cpf && u.password === password);
   if (!user) {
     return res
       .status(401)
-      .json({message: 'Usuário ou senha inválida. \n Pode tentar novamente?'});
+      .json({ message: 'Invalid CPF or password.\nWould you like to try again?' });
   }
 
-  const token = jwt.sign({id: user.id, cpf: user.cpf}, SECRET_KEY);
+  const token = jwt.sign({ id: user.id, cpf: user.cpf }, SECRET_KEY);
 
-  setTimeout(() => res.json({token}), 2000);
+  setTimeout(() => res.json({ token }), 2000);
 });
 
 const authenticate = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
-    return res.status(403).json({message: 'Token necessário'});
+    return res.status(403).json({ message: 'Token required' });
   }
 
   try {
@@ -42,7 +42,7 @@ const authenticate = (req, res, next) => {
     req.user = decoded;
     next();
   } catch {
-    res.status(401).json({message: 'Token inválido'});
+    res.status(401).json({ message: 'Invalid token' });
   }
 };
 
@@ -50,12 +50,12 @@ app.get('/me', authenticate, (req, res) => {
   const users = getUsers();
   const user = users.find(u => u.id === req.user.id);
   if (!user) {
-    return res.status(404).json({message: 'Usuário não encontrado'});
+    return res.status(404).json({ message: 'User not found' });
   }
-  const {senha: _, ...userData} = user;
+  const { password: _, ...userData } = user;
   setTimeout(() => res.json(userData), 2000);
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });

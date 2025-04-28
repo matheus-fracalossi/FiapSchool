@@ -3,569 +3,569 @@
     "id": 1,
     "cpf": "96929456004",
     "email": "gustavo-da-silva@example.com",
-    "senha": "96929456004",
-    "primeiroNome": "Gustavo",
-    "sobrenome": "da Silva",
-    "alunos": [
+    "password": "96929456004",
+    "firstName": "Gustavo",
+    "lastName": "da Silva",
+    "students": [
       {
         "rm": 12567,
-        "turma": "7EF",
-        "periodo": "Matutino",
-        "primeiroNome": "Rafael",
-        "sobrenome": "da Silva",
-        "agenda": [
+        "classGroup": "7EF",
+        "period": "Morning",
+        "firstName": "Rafael",
+        "lastName": "da Silva",
+        "schedule": [
           {
-            "dia": "2025-03-16",
-            "aulas": []
+            "day": "2025-03-16",
+            "classes": []
           },
           {
-            "dia": "2025-03-17",
-            "aulas": [
+            "day": "2025-03-17",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Matemática I"
+                "time": "07:15 - 08:00",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Língua Inglesa"
+                "time": "08:00 - 08:45",
+                "subject": "English Language"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Língua Inglesa"
+                "time": "09:15 - 10:00",
+                "subject": "English Language"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Ciências"
+                "time": "10:00 - 10:45",
+                "subject": "Sciences"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Ciências"
+                "time": "10:45 - 11:30",
+                "subject": "Sciences"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Coding"
+                "time": "11:30 - 12:15",
+                "subject": "Coding"
               }
             ]
           },
           {
-            "dia": "2025-03-18",
-            "aulas": [
+            "day": "2025-03-18",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "07:15 - 08:00",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Matemática II"
+                "time": "08:00 - 08:45",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "09:15 - 10:00",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Língua Portuguesa"
+                "time": "10:00 - 10:45",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Língua Portuguesa"
+                "time": "10:45 - 11:30",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Língua Inglesa"
+                "time": "11:30 - 12:15",
+                "subject": "English Language"
               }
             ]
           },
           {
-            "dia": "2025-03-19",
-            "aulas": [
+            "day": "2025-03-19",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Ciências"
+                "time": "07:15 - 08:00",
+                "subject": "Sciences"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Ciências"
+                "time": "08:00 - 08:45",
+                "subject": "Sciences"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Arte"
+                "time": "09:15 - 10:00",
+                "subject": "Art"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Arte"
+                "time": "10:00 - 10:45",
+                "subject": "Art"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Matemática II"
+                "time": "10:45 - 11:30",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "11:30 - 12:15",
+                "subject": "Text Production and Interpretation"
               }
             ]
           },
           {
-            "dia": "2025-03-20",
-            "aulas": [
+            "day": "2025-03-20",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Projeto"
+                "time": "07:15 - 08:00",
+                "subject": "Project"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Projeto"
+                "time": "08:00 - 08:45",
+                "subject": "Project"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Projeto"
+                "time": "09:15 - 10:00",
+                "subject": "Project"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Língua Inglesa"
+                "time": "10:00 - 10:45",
+                "subject": "English Language"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Educação Física"
+                "time": "10:45 - 11:30",
+                "subject": "Physical Education"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Educação Física"
+                "time": "11:30 - 12:15",
+                "subject": "Physical Education"
               }
             ]
           },
           {
-            "dia": "2025-03-21",
-            "aulas": [
+            "day": "2025-03-21",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Matemática II"
+                "time": "07:15 - 08:00",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "História"
+                "time": "08:00 - 08:45",
+                "subject": "History"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Geografia"
+                "time": "09:15 - 10:00",
+                "subject": "Geography"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Matemática I"
+                "time": "10:00 - 10:45",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Matemática I"
+                "time": "10:45 - 11:30",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Matemática I"
+                "time": "11:30 - 12:15",
+                "subject": "Mathematics I"
               }
             ]
           },
           {
-            "dia": "2025-03-22",
-            "aulas": []
+            "day": "2025-03-22",
+            "classes": []
           }
         ],
-        "boletim": [
+        "reportCard": [
           {
-            "ano": "2025",
-            "turma": "7EF",
-            "trimestres": [
+            "year": "2025",
+            "classGroup": "7EF",
+            "terms": [
               {
-                "trimestre": 1,
-                "disciplinas": [
+                "term": 1,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 9.5,
-                    "faltas": 0
+                    "name": "Portuguese Language",
+                    "grade": 9.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 8,
-                    "faltas": 1
+                    "name": "Text Production and Interpretation",
+                    "grade": 8,
+                    "absences": 1
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 7.5,
-                    "faltas": 2
+                    "name": "Mathematics I",
+                    "grade": 7.5,
+                    "absences": 2
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Mathematics II",
+                    "grade": 8.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 7,
-                    "faltas": 1
+                    "name": "Geography",
+                    "grade": 7,
+                    "absences": 1
                   },
                   {
-                    "nome": "História",
-                    "nota": 10,
-                    "faltas": 1
+                    "name": "History",
+                    "grade": 10,
+                    "absences": 1
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 8,
-                    "faltas": 4
+                    "name": "Sciences",
+                    "grade": 8,
+                    "absences": 4
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "English Language",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Arte",
-                    "nota": 6.5,
-                    "faltas": 2
+                    "name": "Art",
+                    "grade": 6.5,
+                    "absences": 2
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 7,
-                    "faltas": 2
+                    "name": "Project",
+                    "grade": 7,
+                    "absences": 2
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Coding",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 7,
-                    "faltas": 1
+                    "name": "Physical Education",
+                    "grade": 7,
+                    "absences": 1
                   }
                 ]
               },
               {
-                "trimestre": 2,
-                "disciplinas": [
+                "term": 2,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               },
               {
-                "trimestre": 3,
-                "disciplinas": [
+                "term": 3,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               }
             ]
           },
           {
-            "ano": "2024",
-            "turma": "6EF",
-            "trimestres": [
+            "year": "2024",
+            "classGroup": "6EF",
+            "terms": [
               {
-                "trimestre": 1,
-                "disciplinas": [
+                "term": 1,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 8,
-                    "faltas": 1
+                    "name": "Portuguese Language",
+                    "grade": 8,
+                    "absences": 1
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 7,
-                    "faltas": 2
+                    "name": "Text Production and Interpretation",
+                    "grade": 7,
+                    "absences": 2
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Mathematics I",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Mathematics II",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 7,
-                    "faltas": 1
+                    "name": "Geography",
+                    "grade": 7,
+                    "absences": 1
                   },
                   {
-                    "nome": "História",
-                    "nota": 10,
-                    "faltas": 3
+                    "name": "History",
+                    "grade": 10,
+                    "absences": 3
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 9,
-                    "faltas": 1
+                    "name": "Sciences",
+                    "grade": 9,
+                    "absences": 1
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 6,
-                    "faltas": 1
+                    "name": "English Language",
+                    "grade": 6,
+                    "absences": 1
                   },
                   {
-                    "nome": "Arte",
-                    "nota": 7,
-                    "faltas": 2
+                    "name": "Art",
+                    "grade": 7,
+                    "absences": 2
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 8,
-                    "faltas": 2
+                    "name": "Project",
+                    "grade": 8,
+                    "absences": 2
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 9,
-                    "faltas": 1
+                    "name": "Coding",
+                    "grade": 9,
+                    "absences": 1
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Physical Education",
+                    "grade": 10,
+                    "absences": 0
                   }
                 ]
               },
               {
-                "trimestre": 2,
-                "disciplinas": [
+                "term": 2,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 7,
-                    "faltas": 1
+                    "name": "Portuguese Language",
+                    "grade": 7,
+                    "absences": 1
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 7.5,
-                    "faltas": 0
+                    "name": "Text Production and Interpretation",
+                    "grade": 7.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Mathematics I",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "Mathematics II",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 9,
-                    "faltas": 1
+                    "name": "Geography",
+                    "grade": 9,
+                    "absences": 1
                   },
                   {
-                    "nome": "História",
-                    "nota": 9.5,
-                    "faltas": 1
+                    "name": "History",
+                    "grade": 9.5,
+                    "absences": 1
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Sciences",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "English Language",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Arte",
-                    "nota": 7.5,
-                    "faltas": 1
+                    "name": "Art",
+                    "grade": 7.5,
+                    "absences": 1
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Project",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 9,
-                    "faltas": 2
+                    "name": "Coding",
+                    "grade": 9,
+                    "absences": 2
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Physical Education",
+                    "grade": 8,
+                    "absences": 0
                   }
                 ]
               },
               {
-                "trimestre": 3,
-                "disciplinas": [
+                "term": 3,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Portuguese Language",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Text Production and Interpretation",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Mathematics I",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 9.5,
-                    "faltas": 0
+                    "name": "Mathematics II",
+                    "grade": 9.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "Geography",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "História",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "History",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Sciences",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "English Language",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "Arte",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Art",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 6,
-                    "faltas": 0
+                    "name": "Project",
+                    "grade": 6,
+                    "absences": 0
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 7.5,
-                    "faltas": 0
+                    "name": "Coding",
+                    "grade": 7.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Physical Education",
+                    "grade": 8.5,
+                    "absences": 0
                   }
                 ]
               }
@@ -575,362 +575,362 @@
       },
       {
         "rm": 12568,
-        "turma": "2EM",
-        "periodo": "Matutino",
-        "primeiroNome": "Joana",
-        "sobrenome": "da Silva",
-        "agenda": [
+        "classGroup": "2EM",
+        "period": "Morning",
+        "firstName": "Joana",
+        "lastName": "da Silva",
+        "schedule": [
           {
-            "dia": "2025-03-16",
-            "aulas": []
+            "day": "2025-03-16",
+            "classes": []
           },
           {
-            "dia": "2025-03-17",
-            "aulas": [
+            "day": "2025-03-17",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Geografia"
+                "time": "07:15 - 08:00",
+                "subject": "Geography"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "História"
+                "time": "08:00 - 08:45",
+                "subject": "History"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Arte"
+                "time": "09:15 - 10:00",
+                "subject": "Art"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Arte"
+                "time": "10:00 - 10:45",
+                "subject": "Art"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Matemática I"
+                "time": "10:45 - 11:30",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Matemática I"
+                "time": "11:30 - 12:15",
+                "subject": "Mathematics I"
               }
             ]
           },
           {
-            "dia": "2025-03-18",
-            "aulas": [
+            "day": "2025-03-18",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Educação Física"
+                "time": "07:15 - 08:00",
+                "subject": "Physical Education"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Educação Física"
+                "time": "08:00 - 08:45",
+                "subject": "Physical Education"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Coding"
+                "time": "09:15 - 10:00",
+                "subject": "Coding"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Projeto"
+                "time": "10:00 - 10:45",
+                "subject": "Project"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Projeto"
+                "time": "10:45 - 11:30",
+                "subject": "Project"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Projeto"
+                "time": "11:30 - 12:15",
+                "subject": "Project"
               }
             ]
           },
           {
-            "dia": "2025-03-19",
-            "aulas": [
+            "day": "2025-03-19",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "07:15 - 08:00",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "08:00 - 08:45",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Ciências"
+                "time": "09:15 - 10:00",
+                "subject": "Sciences"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Ciências"
+                "time": "10:00 - 10:45",
+                "subject": "Sciences"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Matemática I"
+                "time": "10:45 - 11:30",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Matemática II"
+                "time": "11:30 - 12:15",
+                "subject": "Mathematics II"
               }
             ]
           },
           {
-            "dia": "2025-03-20",
-            "aulas": [
+            "day": "2025-03-20",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Matemática II"
+                "time": "07:15 - 08:00",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Matemática II"
+                "time": "08:00 - 08:45",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Língua Inglesa"
+                "time": "09:15 - 10:00",
+                "subject": "English Language"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Língua Inglesa"
+                "time": "10:00 - 10:45",
+                "subject": "English Language"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Língua Portuguesa"
+                "time": "10:45 - 11:30",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Ciências"
+                "time": "11:30 - 12:15",
+                "subject": "Sciences"
               }
             ]
           },
           {
-            "dia": "2025-03-21",
-            "aulas": [
+            "day": "2025-03-21",
+            "classes": [
               {
-                "horario": "07:15 - 08:00",
-                "disciplina": "Língua Portuguesa"
+                "time": "07:15 - 08:00",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "08:00 - 08:45",
-                "disciplina": "Língua Inglesa"
+                "time": "08:00 - 08:45",
+                "subject": "English Language"
               },
               {
-                "horario": "09:15 - 10:00",
-                "disciplina": "Língua Inglesa"
+                "time": "09:15 - 10:00",
+                "subject": "English Language"
               },
               {
-                "horario": "10:00 - 10:45",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "10:00 - 10:45",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "10:45 - 11:30",
-                "disciplina": "Ciências"
+                "time": "10:45 - 11:30",
+                "subject": "Sciences"
               },
               {
-                "horario": "11:30 - 12:15",
-                "disciplina": "Matemática I"
+                "time": "11:30 - 12:15",
+                "subject": "Mathematics I"
               }
             ]
           },
           {
-            "dia": "2025-03-22",
-            "aulas": []
+            "day": "2025-03-22",
+            "classes": []
           }
         ],
-        "boletim": [
+        "reportCard": [
           {
-            "ano": "2025",
-            "turma": "2EM",
-            "trimestres": [
+            "year": "2025",
+            "classGroup": "2EM",
+            "terms": [
               {
-                "trimestre": 1,
-                "disciplinas": [
+                "term": 1,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Portuguese Language",
+                    "grade": 8,
+                    "absences": 0
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 8.5,
-                    "faltas": 1
+                    "name": "Text Production and Interpretation",
+                    "grade": 8.5,
+                    "absences": 1
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Mathematics I",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 9.5,
-                    "faltas": 2
+                    "name": "Mathematics II",
+                    "grade": 9.5,
+                    "absences": 2
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Geography",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "História",
-                    "nota": 7.5,
-                    "faltas": 2
+                    "name": "History",
+                    "grade": 7.5,
+                    "absences": 2
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "Sciences",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 8.5,
-                    "faltas": 1
+                    "name": "English Language",
+                    "grade": 8.5,
+                    "absences": 1
                   },
                   {
-                    "nome": "Arte",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Art",
+                    "grade": 8.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Project",
+                    "grade": 8.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 9,
-                    "faltas": 1
+                    "name": "Coding",
+                    "grade": 9,
+                    "absences": 1
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 8,
-                    "faltas": 2
+                    "name": "Physical Education",
+                    "grade": 8,
+                    "absences": 2
                   }
                 ]
               },
               {
-                "trimestre": 2,
-                "disciplinas": [
+                "term": 2,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               },
               {
-                "trimestre": 3,
-                "disciplinas": [
+                "term": 3,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               }
@@ -944,363 +944,363 @@
     "id": 2,
     "cpf": "50879567007",
     "email": "adelaide-silveira@example.com",
-    "senha": "987654",
-    "primeiroNome": "Adelaide",
-    "sobrenome": "Silveira da Costa",
-    "alunos": [
+    "password": "987654",
+    "firstName": "Adelaide",
+    "lastName": "Silveira da Costa",
+    "students": [
       {
         "rm": 13752,
-        "turma": "1EF",
-        "periodo": "Tarde",
-        "primeiroNome": "Bianca",
-        "sobrenome": "Silveira da Costa",
-        "agenda": [
+        "classGroup": "1EF",
+        "period": "Afternoon",
+        "firstName": "Bianca",
+        "lastName": "Silveira da Costa",
+        "schedule": [
           {
-            "dia": "2025-03-16",
-            "aulas": []
+            "day": "2025-03-16",
+            "classes": []
           },
           {
-            "dia": "2025-03-17",
-            "aulas": [
+            "day": "2025-03-17",
+            "classes": [
               {
-                "horario": "13:15 - 14:00",
-                "disciplina": "Língua Portuguesa"
+                "time": "13:15 - 14:00",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "14:00 - 14:45",
-                "disciplina": "Língua Portuguesa"
+                "time": "14:00 - 14:45",
+                "subject": "Portuguese Language"
               },
               {
-                "horario": "15:15 - 16:00",
-                "disciplina": "Matemática I"
+                "time": "15:15 - 16:00",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "16:00 - 16:45",
-                "disciplina": "Matemática I"
+                "time": "16:00 - 16:45",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "16:45 - 17:30",
-                "disciplina": "Educação Física"
+                "time": "16:45 - 17:30",
+                "subject": "Physical Education"
               },
               {
-                "horario": "17:30 - 18:15",
-                "disciplina": "Educação Física"
+                "time": "17:30 - 18:15",
+                "subject": "Physical Education"
               }
             ]
           },
           {
-            "dia": "2025-03-18",
-            "aulas": [
+            "day": "2025-03-18",
+            "classes": [
               {
-                "horario": "13:15 - 14:00",
-                "disciplina": "Projeto"
+                "time": "13:15 - 14:00",
+                "subject": "Project"
               },
               {
-                "horario": "14:00 - 14:45",
-                "disciplina": "Projeto"
+                "time": "14:00 - 14:45",
+                "subject": "Project"
               },
               {
-                "horario": "15:15 - 16:00",
-                "disciplina": "Projeto"
+                "time": "15:15 - 16:00",
+                "subject": "Project"
               },
               {
-                "horario": "16:00 - 16:45",
-                "disciplina": "História"
+                "time": "16:00 - 16:45",
+                "subject": "History"
               },
               {
-                "horario": "16:45 - 17:30",
-                "disciplina": "Geografia"
+                "time": "16:45 - 17:30",
+                "subject": "Geography"
               },
               {
-                "horario": "17:30 - 18:15",
-                "disciplina": "Coding"
+                "time": "17:30 - 18:15",
+                "subject": "Coding"
               }
             ]
           },
           {
-            "dia": "2025-03-19",
-            "aulas": [
+            "day": "2025-03-19",
+            "classes": [
               {
-                "horario": "13:15 - 14:00",
-                "disciplina": "Ciências"
+                "time": "13:15 - 14:00",
+                "subject": "Sciences"
               },
               {
-                "horario": "14:00 - 14:45",
-                "disciplina": "Ciências"
+                "time": "14:00 - 14:45",
+                "subject": "Sciences"
               },
               {
-                "horario": "15:15 - 16:00",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "15:15 - 16:00",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "16:00 - 16:45",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "16:00 - 16:45",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "16:45 - 17:30",
-                "disciplina": "Matemática II"
+                "time": "16:45 - 17:30",
+                "subject": "Mathematics II"
               },
               {
-                "horario": "17:30 - 18:15",
-                "disciplina": "Matemática II"
+                "time": "17:30 - 18:15",
+                "subject": "Mathematics II"
               }
             ]
           },
           {
-            "dia": "2025-03-20",
-            "aulas": [
+            "day": "2025-03-20",
+            "classes": [
               {
-                "horario": "13:15 - 14:00",
-                "disciplina": "Língua Inglesa"
+                "time": "13:15 - 14:00",
+                "subject": "English Language"
               },
               {
-                "horario": "14:00 - 14:45",
-                "disciplina": "Língua Inglesa"
+                "time": "14:00 - 14:45",
+                "subject": "English Language"
               },
               {
-                "horario": "15:15 - 16:00",
-                "disciplina": "Ciências"
+                "time": "15:15 - 16:00",
+                "subject": "Sciences"
               },
               {
-                "horario": "16:00 - 16:45",
-                "disciplina": "Ciências"
+                "time": "16:00 - 16:45",
+                "subject": "Sciences"
               },
               {
-                "horario": "16:45 - 17:30",
-                "disciplina": "Geografia"
+                "time": "16:45 - 17:30",
+                "subject": "Geography"
               },
               {
-                "horario": "17:30 - 18:15",
-                "disciplina": "História"
+                "time": "17:30 - 18:15",
+                "subject": "History"
               }
             ]
           },
           {
-            "dia": "2025-03-21",
-            "aulas": [
+            "day": "2025-03-21",
+            "classes": [
               {
-                "horario": "13:15 - 14:00",
-                "disciplina": "Matemática I"
+                "time": "13:15 - 14:00",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "14:00 - 14:45",
-                "disciplina": "Matemática I"
+                "time": "14:00 - 14:45",
+                "subject": "Mathematics I"
               },
               {
-                "horario": "15:15 - 16:00",
-                "disciplina": "Língua Inglesa"
+                "time": "15:15 - 16:00",
+                "subject": "English Language"
               },
               {
-                "horario": "16:00 - 16:45",
-                "disciplina": "Língua Inglesa"
+                "time": "16:00 - 16:45",
+                "subject": "English Language"
               },
               {
-                "horario": "16:45 - 17:30",
-                "disciplina": "Produção e Interpretação de Textos"
+                "time": "16:45 - 17:30",
+                "subject": "Text Production and Interpretation"
               },
               {
-                "horario": "17:30 - 18:15",
-                "disciplina": "Matemática II"
+                "time": "17:30 - 18:15",
+                "subject": "Mathematics II"
               }
             ]
           },
           {
-            "dia": "2025-03-22",
-            "aulas": []
+            "day": "2025-03-22",
+            "classes": []
           }
         ],
-        "boletim": [
+        "reportCard": [
           {
-            "ano": "2025",
-            "turma": "1EF",
-            "trimestres": [
+            "year": "2025",
+            "classGroup": "1EF",
+            "terms": [
               {
-                "trimestre": 1,
-                "disciplinas": [
+                "term": 1,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Portuguese Language",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Text Production and Interpretation",
+                    "grade": 8.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Mathematics I",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Mathematics II",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "Geography",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "História",
-                    "nota": 7,
-                    "faltas": 0
+                    "name": "History",
+                    "grade": 7,
+                    "absences": 0
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": 10,
-                    "faltas": 0
+                    "name": "Sciences",
+                    "grade": 10,
+                    "absences": 0
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": 7.5,
-                    "faltas": 0
+                    "name": "English Language",
+                    "grade": 7.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": 9,
-                    "faltas": 0
+                    "name": "Project",
+                    "grade": 9,
+                    "absences": 0
                   },
                   {
-                    "nome": "Coding",
-                    "nota": 8.5,
-                    "faltas": 0
+                    "name": "Coding",
+                    "grade": 8.5,
+                    "absences": 0
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": 8,
-                    "faltas": 0
+                    "name": "Physical Education",
+                    "grade": 8,
+                    "absences": 0
                   }
                 ]
               },
               {
-                "trimestre": 2,
-                "disciplinas": [
+                "term": 2,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               },
               {
-                "trimestre": 3,
-                "disciplinas": [
+                "term": 3,
+                "subjects": [
                   {
-                    "nome": "Língua Portuguesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Portuguese Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Produção e Interpretação de Textos",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Text Production and Interpretation",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática I",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics I",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Matemática II",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Mathematics II",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Geografia",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Geography",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "História",
-                    "nota": null,
-                    "faltas": null
+                    "name": "History",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Ciências",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Sciences",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Língua Inglesa",
-                    "nota": null,
-                    "faltas": null
+                    "name": "English Language",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Arte",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Art",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Projeto",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Project",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Coding",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Coding",
+                    "grade": null,
+                    "absences": null
                   },
                   {
-                    "nome": "Educação Física",
-                    "nota": null,
-                    "faltas": null
+                    "name": "Physical Education",
+                    "grade": null,
+                    "absences": null
                   }
                 ]
               }

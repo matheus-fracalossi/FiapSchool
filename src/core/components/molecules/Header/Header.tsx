@@ -18,7 +18,7 @@ export const Header = ({ onPress }: HeaderProps) => {
         resizeMode='contain'
       />
       <Row gap={24}>
-        {user.alunos.length && (
+        {user.students.length && (
           <Link onPress={openModal} size="small">
             TROCAR PERFIL
           </Link>

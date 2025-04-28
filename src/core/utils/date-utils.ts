@@ -1,5 +1,5 @@
 const localeDate = (date: Date, options: Intl.DateTimeFormatOptions) =>
-  date.toLocaleDateString('pt-BR', options);
+  date.toLocaleDateString('en-US', options);
 
 export const formatDate = (dateString: string): string | null => {
   const date = new Date(dateString + 'T00:00:00');
@@ -11,10 +11,9 @@ export const formatDate = (dateString: string): string | null => {
   const formattedDate = localeDate(date, {
     day: 'numeric',
     month: 'long',
-    timeZone: 'America/Sao_Paulo',
   });
 
-  const weekday = localeDate(date, {weekday: 'long'});
+  const weekday = localeDate(date, { weekday: 'long' });
 
   return `${formattedDate}, ${weekday}`;
 };

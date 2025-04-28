@@ -1,10 +1,10 @@
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Grades, Home} from './screens';
-import {Header as BaseHeader} from '../../core/components';
-import {useTheme} from 'styled-components/native';
-import {Calendar, FileCheck} from '../../core/assets/icons';
-import {useAuth} from '../../core/contexts';
-import {UserProvider} from './Contexts';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Grades, Home } from './screens';
+import { Header as BaseHeader } from '../../core/components';
+import { useTheme } from 'styled-components/native';
+import { Calendar, FileCheck } from '../../core/assets/icons';
+import { useAuth } from '../../core/contexts';
+import { UserProvider } from './Contexts';
 
 const Tab = createBottomTabNavigator();
 
@@ -12,14 +12,13 @@ const getHeader = (clearUserToken: () => void) => () =>
   <BaseHeader onPress={clearUserToken} />;
 
 export const HomeTabs = () => {
-  const {colors, typography} = useTheme();
-  const {clearUserToken} = useAuth();
+  const { colors, typography } = useTheme();
+  const { clearUserToken } = useAuth();
 
   const Header = getHeader(clearUserToken);
 
   const screenOptions = {
     header: Header,
-
     tabBarStyle: {
       backgroundColor: colors.lighterBackground,
     },
@@ -35,14 +34,14 @@ export const HomeTabs = () => {
     <UserProvider>
       <Tab.Navigator screenOptions={screenOptions}>
         <Tab.Screen
-          name="AGENDA"
+          name="SCHEDULE"
           component={Home}
-          options={{tabBarIcon: Calendar}}
+          options={{ tabBarIcon: Calendar }}
         />
         <Tab.Screen
-          name="BOLETIM"
+          name="REPORT CARD"
           component={Grades}
-          options={{tabBarIcon: FileCheck}}
+          options={{ tabBarIcon: FileCheck }}
         />
       </Tab.Navigator>
     </UserProvider>
