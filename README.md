@@ -1,4 +1,4 @@
-# FIAP School
+# ISchool
 
 ## 🚀 Tecnologias Utilizadas
 
