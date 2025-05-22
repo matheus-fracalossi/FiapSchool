@@ -1,70 +1,94 @@
+Sure! Here's the updated English version with a warning about using **ngrok** on iOS:
+
+---
+
 # ISchool
 
-## 🚀 Tecnologias Utilizadas
+## 🚀 Technologies Used
 
-- [React Native](https://reactnative.dev/) - 0.78.1
-- [React Navigation](https://reactnavigation.org/) - Navegação entre telas
-- [Axios](https://axios-http.com/) - Requisições HTTP
-- [Styled Components](https://styled-components.com/) - Estilização do app
-- [Express](https://expressjs.com/) - Backend para APIs
-- [Jest](https://jestjs.io/) - Testes unitários
-- [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/) - Padronização do código
+* [React Native](https://reactnative.dev/) - 0.78.1
+* [React Navigation](https://reactnavigation.org/) - Screen Navigation
+* [Axios](https://axios-http.com/) - HTTP Requests
+* [Styled Components](https://styled-components.com/) - App Styling
+* [Express](https://expressjs.com/) - Backend for APIs
+* [Jest](https://jestjs.io/) - Unit Testing
+* [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/) - Code Standardization
 
-## 🛠️ Como Rodar o Projeto
+## 🛠️ How to Run the Project
 
-### 📌 Requisitos:
+### 📌 Requirements:
 
-- Node.js >= 18
-- Yarn ou npm
-- Ambiente configurado para React Native (Android Studio/Xcode)
+* Node.js >= 18
+* Yarn or npm
+* Environment configured for React Native (Android Studio/Xcode)
 
-### 🔧 Instalação e Execução
+### 🔧 Installation and Execution
 
+1. Install the dependencies:
 
-1. Instale as dependências:
    ```sh
    yarn install
    ```
-2. Copie o arquivo .env.template e renomeie para `.env`, dentro dele, aponte a api para onde irá rodar o servidor (padrão, porta:3000, ip da rede local da máquina) por exemplo :
+
+2. Copy the `.env.template` file and rename it to `.env`. Inside, set the API URL to point to where the backend server will run (default: port 3000, local IP), for example:
+
    ```sh
    API_URL=http://192.168.1.10:3000
    ```
-2. Inicie o servidor:
+
+   ⚠️ **Important for iOS:** iOS simulators do not support local network IPs directly. You must use a tunneling service like [ngrok](https://ngrok.com/) to expose your local backend:
+
+   ```sh
+   ngrok http 3000
+   ```
+
+   Then, use the generated `https://...` URL in your `.env` file:
+
+   ```sh
+   API_URL=https://your-ngrok-url.ngrok.io
+   ```
+
+3. Start the server:
+
    ```sh
    yarn server:start
    ```
-3. Execute o app no Android:
+
+4. Run the app on Android:
+
    ```sh
    yarn android
    ```
-4. Execute o app no iOS:
+
+5. Run the app on iOS:
+
    ```sh
    yarn ios
    ```
 
-## 🧪 Testes
+## 🧪 Tests
 
-Para rodar os testes unitários, execute:
+To run the unit tests, execute:
 
 ```sh
 yarn test
 ```
 
-## 📜 Padronização de Código
+## 📜 Code Standardization
 
-Antes de commitar, o projeto roda lint e testes automaticamente via Husky.
+Before committing, the project automatically runs lint and tests via Husky:
 
 ```sh
 yarn lint
 ```
 
-## 🛠️ Scripts Disponíveis
+## 🛠️ Available Scripts
 
-| Comando             | Descrição                          |
-| ------------------- | ---------------------------------- |
-| `yarn android`      | Executa o app no emulador Android  |
-| `yarn ios`          | Executa o app no simulador iOS     |
-| `yarn start`        | Inicia o Metro Bundler             |
-| `yarn test`         | Roda os testes unitários           |
-| `yarn lint`         | Verifica erros de estilo no código |
-| `yarn server:start` | Inicia o servidor backend          |
+| Command             | Description                          |
+| ------------------- | ------------------------------------ |
+| `yarn android`      | Runs the app on the Android emulator |
+| `yarn ios`          | Runs the app on the iOS simulator    |
+| `yarn start`        | Starts the Metro Bundler             |
+| `yarn test`         | Runs the unit tests                  |
+| `yarn lint`         | Checks for style errors in the code  |
+| `yarn server:start` | Starts the backend server            |
