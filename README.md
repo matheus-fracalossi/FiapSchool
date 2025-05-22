@@ -1,7 +1,3 @@
-Sure! Here's the updated English version with a warning about using **ngrok** on iOS:
-
----
-
 # ISchool
 
 ## 🚀 Technologies Used
